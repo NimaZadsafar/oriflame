@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!--make a website-->
+    <div class="wrapper">
+      <!--header-->
+      <header>
+        <div>
+          <div><i class="fa fa-bars" aria-hidden="true"></i></div>
+          <div>
+            <a href="#"><img src="./images/logo.png" alt="" /></a>
+          </div>
+        </div>
+        <div>
+          <input type="text" placeholder="search" /><i
+            class="fa fa-search"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div>
+          <div><a href="#">JOIN US</a></div>
+          <div><a href="#">SIGN IN</a></div>
+          <div><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+        </div>
+        <!--make submenu-->
+        <div class="submenu">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="rightmenu"></div>
+        <!--end make submenu-->
+      </header>
+      <div class="dawsh"></div>
+      <!--end header-->
+    </div>
+    <!--end make a website-->
+    <script>
+      let menu = document.querySelector("div>i.fa-bars");
+      let SubMeno = document.querySelector("div.submenu");
+      let flag = true;
+      menu.addEventListener("click", function () {
+        if (flag === true) {
+          menu.classList = "fa fa-times";
+          SubMeno.style.display = "block";
+          flag = false;
+        } else {
+          menu.classList = "fa fa-bars";
+          SubMeno.style.display = "none";
+          flag = true;
+        }
+      })
+      let shop=document.querySelector("div>i.fa-shopping-bag")
+      let rightmenu=document.querySelector("div.rightmenu")
+      shop.addEventListener("mouseenter",function() {
+        rightmenu.style.display="block"
+      })
+      shop.addEventListener("mouseleave",function() {
+        rightmenu.style.display="none"
+      })
+    </script>
+  </body>
+</html>
